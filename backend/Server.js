@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const { connectDb } = require("./Db/DataBase");
 const cors = require("cors");
-const http = require("http"); // <- Required for socket.io
+const http = require("http"); 
 const { Server } = require("socket.io");
 
 const Register = require("./routes/Register_Routes");
@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 app.use("/api/Register", Register);
 app.use("/api/Login", Login);
 app.use("/api/CreateNotes", CreateNotes);
-app.use("/api/notes", EditRoutes); // Will now have access to req.io
+app.use("/api/notes", EditRoutes); 
 
 const PORT = 8080;
 server.listen(PORT, () => {
