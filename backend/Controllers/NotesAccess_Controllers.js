@@ -1,6 +1,5 @@
 const Note = require("../Models/Notes_Schema");
 
-// Get all notes
 const getAllNotes = async (req, res) => {
   try {
     const notes = await Note.find();
@@ -10,7 +9,7 @@ const getAllNotes = async (req, res) => {
   }
 };
 
-// Update note
+
 const updateNote = async (req, res) => {
   const { id } = req.params;
   const { EventName, Description } = req.body;
@@ -35,7 +34,6 @@ const updateNote = async (req, res) => {
   }
 };
 
-// Delete note
 const deleteNote = async (req, res) => {
   const { id } = req.params;
 
