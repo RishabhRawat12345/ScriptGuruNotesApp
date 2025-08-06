@@ -34,7 +34,7 @@ const AllNotes = () => {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/notes/all');
+      const response = await axios.get('https://scriptgurunotesapp-4.onrender.com/api/notes/all');
       setNotes(response.data);
     } catch (error) {
       console.error('Error fetching notes:', error);
@@ -43,7 +43,7 @@ const AllNotes = () => {
 
   const deleteNote = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/notes/delete/${id}`);
+      await axios.delete(`https://scriptgurunotesapp-4.onrender.com/api/notes/delete/${id}`);
     } catch (error) {
       console.error('Delete failed:', error);
     }
@@ -60,7 +60,7 @@ const AllNotes = () => {
 
   const saveEdit = async (id) => {
     try {
-      await axios.put(`http://localhost:8080/api/notes/update/${id}`, editedNote);
+      await axios.put(`https://scriptgurunotesapp-4.onrender.com/api/notes/update/${id}`, editedNote);
       setEditNoteId(null);
     } catch (error) {
       console.error('Update failed:', error);
