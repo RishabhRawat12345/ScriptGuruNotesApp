@@ -22,7 +22,7 @@ const handleSubmit = async (e) => {
   console.log(eventData);
 
   try {
-    const res = await axios.post("http://localhost:8080/api/CreateNotes/Eventform", eventData);
+    const res = await axios.post("https://scriptgurunotesapp-4.onrender.com/api/CreateNotes/Eventform", eventData);
     console.log(res.data);
   } catch (error) {
     console.error("Error submitting event data:", error);
